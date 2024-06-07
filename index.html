@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      .video-header {
+  position: relative;
+}
+.video-header-bg-image {
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+  max-width: 100%;
+}
+.video-header-video {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.overlay-wrap {
+  padding: 20px 20px 16px 20px;
+  position: relative;
+  bottom: 0;
+  color: #ffffff;
+  z-index: 1;
+  max-width: 100%;
+  background-color: #18476d;
+}
+.video-background-controls {
+  display: flex;
+  border: 4px solid #fff;
+  background-color: #2d637f;
+  padding: 0;
+  top: auto !important;
+  bottom: 90px;
+  right: 20% !important;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.play-toggle {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border-color: transparent transparent transparent #fff;
+  transition: all 100ms ease-in-out;
+  background-color: transparent;
+  cursor: pointer;
+  border-style: double;
+  border-width: 0px 0px 0px 32px;
+  padding: 0;
+}
+.pause-toggle {
+  border-style: solid;
+  border-width: 20px 0 20px 34px;
+}
+
+@media only screen and (min-width: 992px) {
+  .overlay-wrap {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    max-width: 500px;
+  }
+}
+    </style>
+  </head>
+<body>  
+
+<div id="block-inverve-d8bs5-homepgevideoheader" class="block block-block-content video-header">
+  <div class="video-header-bg-image" style="background-image: url('https://219590.fs1.hubspotusercontent-na1.net/hubfs/219590/theme-assets/defaults/video-poster.webp');">
+    <div class="video-header-video" aria-hidden="true">
+      <div data-vbg="https://219590.fs1.hubspotusercontent-na1.net/hubfs/219590/theme-assets/defaults/video-header.mp4"></div>
+    </div>
+  </div>
+  <div class="overlay-wrap">
+    
+            <div class="field video-overlay-content field--name-body field--type-text-with-summary field--label-hidden field--item"><h2>Test</h2>
+<p>orem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus, urna ut sodales scelerisque, nunc nibh pellentesque neque, vel varius felis erat ut magna. Nulla quis purus porttitor, convallis ligula id, posuere justo. Sed sodales iaculis lorem, in congue turpis finibus id. Morbi iaculis, nisi eu congue tincidunt, nulla urna cursus urna, quis accumsan nunc odio eu sapien.&nbsp;</p>
+<div class="button-wrapper"><a href="https://www.google.com">BUTTON EXAMPLE</a></div>
+<p>&nbsp;</p>
+</div>
+      
+  </div>
+</div>
+<script src="https://unpkg.com/youtube-background/jquery.youtube-background.js"></script>
+  
+  <script>
+    
+  const videoBackgrounds = new VideoBackgrounds('[data-vbg]', {
+    'play-button': true,
+    'always-play': true
+  });
+  
+  const box = document.querySelector('.play-toggle');
+  box.addEventListener('click', (e)=>{
+    e.target.classList.toggle('pause-toggle');
+  })
+  </script>
+  
+</body>
+</html>
